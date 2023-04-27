@@ -31,10 +31,58 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0px 1rem;
+    width: auto;
+    text-align: center;
+    padding-top: 5px;
+    position: relative;
+    display: inline-flex;
+}
+header nav ul li::before {
+    content: "";
+    width: 0;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+    
+header nav ul li:hover::before {
+width: 100%;
 }
 
+header nav ul li::before {
+content: "";
+width: 0;
+height: 5px;
+background: #fff;
+position: absolute;
+bottom: 0;
+left: 0;
+transition: width 0.3s ease-in-out;
+}
+
+header nav ul li:hover::before {
+width: 100%;
+}
+    header nav ul li::before {
+content: "";
+width: 0;
+height: 5px;
+background: #fff;
+position: absolute;
+bottom: 0;
+left: 0;
+transition: width 0.3s ease-in-out;
+}
+
+header nav ul li:hover::before {
+width: 100%;
+}
 header .menu a {
     color: var(--f-text-color);
     text-decoration: none;
@@ -208,5 +256,10 @@ main.site-content {
         width: 140px;
         text-align: center;
         padding-top: 5px;
+        transition: all;
+    }
+
+    header nav ul li::before {
+        
     }
 }
