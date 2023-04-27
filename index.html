@@ -15,9 +15,17 @@
                     alt="">
             </a>
         </div>
+        <input type="checkbox" id="toggler">
+            <label for="toggler"><i class="ri-menu-line"></i>
+                <div class="hamburger" onclick="Hamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </label>
         <nav>
-            <div class="header-menus">
-                <ul>
+            <div class="menu">
+                <ul class="list">
                     <li><a href="#">News</a></li>
                     <li><a href="#">Video</a></li>
                     <li><a href="#">Teams</a></li>
@@ -28,11 +36,6 @@
                     <li><a href="#">Fans</a></li>
                 </ul>
             </div>
-            <button class="menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
     </header>
     <main class="site-content">
@@ -70,5 +73,6 @@
         </aside>
     </main>
     <script src="script.js"></script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 </html>

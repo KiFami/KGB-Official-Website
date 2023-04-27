@@ -35,13 +35,11 @@ header nav ul li {
     padding: 0 1rem;
 }
 
-header .header-menus a {
+header .menu a {
     color: var(--f-text-color);
     text-decoration: none;
     text-transform: uppercase;
 }
-
-
 
 main.site-content {
     margin-top: 20px;
@@ -122,44 +120,23 @@ main.site-content {
     opacity: 1;
 }
 
-.menu-toggle {
+#toggler, .hamburger
+{
     display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    z-index: 1;
-    width: 30px;
-    height: 25px;
-    padding: 0;
-    border: none;
-    background: transparent;
 }
 
-.menu-toggle span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 3px;
+.bar1, .bar2, .bar3 
+{
+    width: 35px;
+    height: 5px;
     background-color: #fff;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: all 0.25s ease-in-out;
+    margin: 6px 0;
+    transition: 0.4s;
 }
-
-.menu-toggle span:nth-child(1) {
-    top: 0;
-}
-
-.menu-toggle span:nth-child(2) {
-    top: 11px;
-}
-
-.menu-toggle span:nth-child(3) {
-    top: 22px;
-}
+  
+.change .bar1 {transform: translate(0, 11px) rotate(-45deg);}
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: translate(0, -11px) rotate(45deg);}
 
 /*Responsive*/
 
@@ -171,22 +148,55 @@ main.site-content {
     .section-header {
         width: 60vw;
     }
+    
 }
 
 @media screen and (max-width: 775px) {
-    .header-menus {
-        display: none;
+
+    .section-header {
+        font-size: 13px;
+        width: 95vw;
     }
 
-    .menu-toggle {
-        display: block;
+    .hamburger
+    {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        margin-left: auto;
+        display: inline;
+        padding: 10px;
+    }
+    .menu
+    {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header label 
+    {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked ~ nav .menu
+    {
+        max-height: 100%;
     }
 
     header.region {
         padding: 20px;
     }
 
-    .section-header {
-        font-size: 13px;
+    main.site-content {
+        width: 95vw;
     }
 }
