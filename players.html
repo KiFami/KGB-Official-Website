@@ -43,6 +43,7 @@
     </header>
     <main class="site-content" style="display: flex; justify-content: center;">
         <div class="page-content">
+            <a href="#" class="scrollup" onclick="jQuery()"></a>
             <div class="section-header-text">
                 <h2>BRAMKARZE</h2>
             </div>
@@ -108,5 +109,26 @@
             </div>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+    jQuery(function($) 
+    {
+        //zresetuj scrolla
+        $.scrollTo(0);
+
+        $('.scrollup').click(function() {$.scrollTo($('body'), 1000);});
+    }
+    );
+
+    //pokaż podczas przewijania
+	$(window).scroll(function()
+	{
+		if($(this).scrollTop()>800) $('.scrollup').fadeIn();
+		else $('.scrollup').fadeOut();		
+	}
+	);
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 </html>
