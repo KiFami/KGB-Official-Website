@@ -26,6 +26,7 @@ header.region {
     position: sticky;
     top: 0px;
     z-index: 1;
+    height: 100%;
 }
 
 header nav ul {
@@ -96,21 +97,59 @@ main.site-content {
     grid-template-rows: auto auto auto auto;
     gap: 20px;
     width: calc(60vw - 340px);
-  }
+}
   
-  article {
+article {
     background-color: #fff;
     border-top: 2px solid var(--f-bg-color);
     display: flex;
-  }
+}
   
-  article img {
+article img {
     width: 100%;
     height: auto;
     max-width: 400px;
     max-height: 400px;
     object-fit: cover;
-  }
+}
+
+.section-header-text {
+    padding-top: 50px;
+    width: 100%;
+    border-bottom: 3px dashed;
+    text-align: center;
+}
+
+.section-header-text:nth-child(1) {
+    padding-top: 0px;
+}
+
+.player-item {
+    border-top: 2px solid var(--f-bg-color);
+    background: var(--f-text-color);
+    margin-top: 30px;
+}
+
+.player-item h2 {
+    font-size: 42px;
+    opacity: 0.3;
+}
+
+.player-item h4 {
+    padding-left: 10px;
+    margin-bottom: -10px;
+}
+
+.player-item .description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.player-item img {
+    width: 100%;
+}
 
 .page-sidebar {width: 300px;}
 .page-sidebar h2 {font-size: 32px;}
@@ -270,6 +309,11 @@ main.site-content {
         text-align: center;
         padding-top: 5px;
         transition: all;
+    }
+
+    header nav ul li::before,
+    header nav ul li:hover::before {
+        display: none;
     }
 
 }
