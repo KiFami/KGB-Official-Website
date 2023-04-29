@@ -23,6 +23,9 @@ header.region {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 header nav ul {
@@ -51,43 +54,14 @@ header nav ul li::before {
     transition: width 0.3s ease-in-out;
 }
     
-header nav ul li:hover::before {
-width: 100%;
-}
+header nav ul li:hover::before {width: 100%;}
 
-header nav ul li::before {
-content: "";
-width: 0;
-height: 5px;
-background: #fff;
-position: absolute;
-bottom: 0;
-left: 0;
-transition: width 0.3s ease-in-out;
-}
-
-header nav ul li:hover::before {
-width: 100%;
-}
-    header nav ul li::before {
-content: "";
-width: 0;
-height: 5px;
-background: #fff;
-position: absolute;
-bottom: 0;
-left: 0;
-transition: width 0.3s ease-in-out;
-}
-
-header nav ul li:hover::before {
-width: 100%;
-}
 header .menu a {
     color: var(--f-text-color);
     text-decoration: none;
     text-transform: uppercase;
 }
+
 
 main.site-content {
     margin-top: 20px;
@@ -99,9 +73,7 @@ main.site-content {
     justify-content: space-between;
 }
 
-.page-content {
-    display: block;
-}
+.page-content {display: block;}
 
 .section-header h2{ 
 
@@ -115,23 +87,36 @@ main.site-content {
     background: var(--f-bg-color);
     color: var(--f-text-color);
     width: calc(60vw - 340px);
+    margin-bottom: 10px;
 }
 
-.page-sidebar {
-    width: 300px;
-}
-.page-sidebar h2 {
-    font-size: 32px;
-}
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+    width: calc(60vw - 340px);
+  }
+  
+  article {
+    background-color: #fff;
+    border-top: 2px solid var(--f-bg-color);
+    display: flex;
+  }
+  
+  article img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+  }
 
-#block-followus {
-    width: 80%;
-}
+.page-sidebar {width: 300px;}
+.page-sidebar h2 {font-size: 32px;}
 
-#block-followus h2 
-{
-    padding-top: 0px;
-}
+#block-followus {width: 80%;}
+#block-followus h2 {padding-top: 0px;}
 
 .smart-grid {
     display: flex;
@@ -149,11 +134,13 @@ main.site-content {
     text-align: center;
     margin-right: 16px;
 }
+
 .social-logos__link:before {
     content: "";
     float: left;
     padding-top: 100%;
 }
+
 .social-logos__link>svg {
     display: inline-block;
     left: 50%;
@@ -168,10 +155,7 @@ main.site-content {
     opacity: 1;
 }
 
-#toggler, .hamburger
-{
-    display: none;
-}
+#toggler, .hamburger{display: none;}
 
 .bar1, .bar2, .bar3 
 {
@@ -188,16 +172,44 @@ main.site-content {
 
 /*Responsive*/
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1480px) {
+    main.site-content {
+        width: 75vw;
+    }
+    .section-header {
+        width: calc(75vw - 340px);
+    }
+    .article-content {
+        width: calc(75vw - 340px);
+    }
+
+}
+
+@media screen and (max-width: 1320px) {
     .page-sidebar {
         display: none;
     }
 
     .section-header {
-        width: 60vw;
+        width: 80vw;
     }
-    
+
+    main.site-content {
+        width: 80vw;
+    }
+    .article-content {
+        width: auto;
+    }
 }
+
+@media screen and (max-width: 937px) {
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 
 @media screen and (max-width: 775px) {
 
@@ -215,12 +227,14 @@ main.site-content {
         display: inline;
         padding: 10px;
     }
+
     .menu
     {
         width: 100%;
         max-height: 0;
         overflow: hidden;
     }
+    
     .list
     {
         display: flex;
@@ -229,6 +243,7 @@ main.site-content {
         padding: 20px;
         margin-top: 20px;
     }
+
     header label 
     {
         display: inline-flex;
@@ -252,14 +267,21 @@ main.site-content {
     header nav ul li {
         font-size: 20px;
         font-weight: 500;
-        border-bottom: 1px solid #fff;
-        width: 140px;
         text-align: center;
         padding-top: 5px;
         transition: all;
     }
 
-    header nav ul li::before {
-        
+}
+
+@media screen and (max-width: 700px) {
+    .article-content {
+        place-items: center;
+    }
+    article {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
