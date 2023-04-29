@@ -4,7 +4,7 @@
     --f-bg-color: #0400ff;
     --s-bg-color: #e4e4e4;
     --f-text-color: #fff;
-    --s-text-color: #76798f;
+    --s-text-color: #262a4e;
 }
 
 * {
@@ -104,13 +104,27 @@ article {
     border-top: 2px solid var(--f-bg-color);
     display: flex;
 }
+
+article .description {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+article .description p {
+    font-size: 15px;
+}
   
 article img {
     width: 100%;
-    height: auto;
+    width: 400px;
+    height: 266px;
     max-width: 400px;
     max-height: 400px;
-    object-fit: cover;
+}
+
+#news {
+    text-decoration: none;
+    color: var(--s-text-color);
 }
 
 .section-header-text {
