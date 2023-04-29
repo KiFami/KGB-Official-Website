@@ -42,13 +42,14 @@
         </nav>
     </header>
     <main class="site-content" style="display: flex; justify-content: center;">
-        <div class="page-content">
+        <div class="page-content" style="display: flex; flex-direction: column;
+            align-items: center;">
             <a href="#" class="scrollup" onclick="jQuery()"></a>
             <div class="section-header-text">
                 <h2>BRAMKARZE</h2>
             </div>
             <div class="player-item">
-                <img src="/images/Example_image.png" alt="Tapir">
+                <img src="/images/IMG_20230429_185420574.jpg" alt="Tapir">
                 <div class="description">
                     <h1>Tapir</h1>
                     <h2>1</h2>
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="player-item">
-                <img src="/images/Example_image.png" alt="Kangur">
+                <img src="/images/IMG_20230429_185855407.jpg" alt="Kangur">
                 <div class="description">
                     <h1>Kangur</h1>
                     <h2>3</h2>
@@ -75,7 +76,7 @@
                 <h2>POMOCNICY</h2>
             </div>
             <div class="player-item">
-                <img src="/images/Example_image.png" alt="Kacprol">
+                <img src="/images/IMG_20230429_190047192.jpg" alt="Kacprol">
                 <div class="description">
                     <h1>Kacprol</h1>
                     <h2>4</h2>
@@ -92,7 +93,7 @@
                 </div>
             </div>
             <div class="player-item">
-                <img src="/images/Example_image.png" alt="Hubo">
+                <img src="/images/IMG_20230429_185809391_HDR.jpg" alt="Hubo">
                 <h4>Prawe Skrzydło</h4>
                 <div class="description">
                     <h1>Hubo</h1>
@@ -111,24 +112,7 @@
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="jquery.scrollTo.min.js"></script>
-    <script>
-    jQuery(function($) 
-    {
-        //zresetuj scrolla
-        $.scrollTo(0);
-
-        $('.scrollup').click(function() {$.scrollTo($('body'), 1000);});
-    }
-    );
-
-    //pokaż podczas przewijania
-	$(window).scroll(function()
-	{
-		if($(this).scrollTop()>800) $('.scrollup').fadeIn();
-		else $('.scrollup').fadeOut();		
-	}
-	);
-    </script>
+    <script src="script.js"></script>
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 </html>

@@ -143,6 +143,7 @@ article img {
     background: var(--f-text-color);
     margin-top: 30px;
     transition: all 0.4s;
+    width: 50%;
 }
 
 .player-item:hover {
@@ -272,11 +273,15 @@ article img {
     }
 }
 
-@media screen and (max-width: 937px) {
+@media screen and (max-width: 950px) {
     .list {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .player-item {
+        width: 100%;
     }
 }
 
