@@ -131,6 +131,7 @@ article img {
     padding-top: 50px;
     width: 100%;
     border-bottom: 3px dashed;
+    border-radius: 10%;
     text-align: center;
 }
 
@@ -144,6 +145,7 @@ article img {
     margin-top: 30px;
     transition: all 0.4s;
     width: 50%;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .player-item:hover {
@@ -171,6 +173,25 @@ article img {
     width: 100%;
 }
 
+.player-item .read-more {
+    display: none;
+    animation: fade-in 0.5s ease-in-out;
+    padding: 10px;
+    text-align: center;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.player-item:hover .read-more {
+    display: block;
+}
 .page-sidebar {width: 300px;}
 .page-sidebar h2 {font-size: 32px;}
 
