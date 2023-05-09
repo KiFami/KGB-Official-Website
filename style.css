@@ -303,6 +303,26 @@ article img {
     transform: scale(0.8);
   }
 
+
+  .short-description {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .long-description {
+    display: none;
+  }
+  
+  .read-more-button {
+    margin-top: 10px;
+  }
+
+.club-item {
+    border-bottom: 1px solid #000;
+}
 /*Responsive*/
 
 @media screen and (max-width: 1480px) {
@@ -353,7 +373,7 @@ article img {
 @media screen and (max-width: 1080px) {
 
     .logo {left: 10px;}
-    
+
     .section-header {
         font-size: 13px;
         width: 95vw;

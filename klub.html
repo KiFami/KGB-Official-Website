@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <header class="region">
         <div class="header-top">
             <a href="/">
-                <img src=""
-                    alt="">
+                <img src="./images/logo.png"
+                    alt="" class="logo">
             </a>
         </div>
         <input type="checkbox" id="toggler">
@@ -37,5 +38,30 @@
             </div>
         </nav>
     </header>
+    <main class="site-content">
+        <div class="page-content">
+            <div class="club-item">
+                <div class="title">
+                    <h1>Historia</h1>
+                </div>
+                <div class="short-description">
+                    <p></p>
+                </div>
+                <div class="long-description">
+
+                </div>
+                <button class="read-more-button">Czytaj Więcej</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const readMoreButton = document.querySelector('.read-more-button');
+        const longDescription = document.querySelector('.long-description');
+
+        readMoreButton.addEventListener('click', () => {
+        longDescription.style.display = 'block';
+        readMoreButton.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
