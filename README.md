@@ -1,4 +1,4 @@
 # KGB-Official-Website
-Contractor: Kacper Gadecki
+Programmer: Kacper Gadecki
 Start: 26.04.2023
 Originator/Owner: Kacper Rąpała
