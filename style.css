@@ -27,6 +27,7 @@ header.region {
     top: 0px;
     z-index: 1;
     height: 100%;
+    margin-bottom: 60px;
 }
 
 header nav ul {
@@ -63,6 +64,12 @@ header .menu a {
     text-transform: uppercase;
 }
 
+.logo {
+    position: absolute;
+    top: -5px;
+    left: 200px;
+    width: 140px;
+}
 
 main.site-content {
     margin-top: 20px;
@@ -308,6 +315,7 @@ article img {
     .article-content {
         width: calc(75vw - 340px);
     }
+    .logo {left: 100px;}
 
 }
 
@@ -326,6 +334,7 @@ article img {
     .article-content {
         width: auto;
     }
+    .logo {left: 30px;}
 }
 
 @media screen and (max-width: 950px) {
@@ -341,8 +350,10 @@ article img {
 }
 
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 1080px) {
 
+    .logo {left: 10px;}
+    
     .section-header {
         font-size: 13px;
         width: 95vw;
@@ -387,7 +398,7 @@ article img {
     }
 
     header.region {
-        padding: 20px;
+        padding: 32px;
     }
 
     main.site-content {
