@@ -71,6 +71,10 @@ header .menu a {
     width: 140px;
 }
 
+.ghost {
+    display: none;
+}
+
 main.site-content {
     margin-top: 20px;
     width: 60vw;

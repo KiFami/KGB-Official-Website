@@ -1,6 +1,7 @@
 function Hamburger(x) 
 {
     x.classList.toggle("change");
+    document.querySelector(".logo").classList.toggle("ghost");
 }
 
 jQuery(function($) 
